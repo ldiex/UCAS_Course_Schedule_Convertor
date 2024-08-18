@@ -1,0 +1,10 @@
+{
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0",
+    "login_url":"https://sep.ucas.ac.cn/",
+    "pic_url":"https://sep.ucas.ac.cn/changePic",
+    "slogin_url":"https://sep.ucas.ac.cn/slogin",
+    "redirect_url":"https://sep.ucas.ac.cn/portal/site/226/821",
+    "score_base_url":"https://xkcts.ucas.ac.cn:8443/score/bks/",
+    "course_base_url":"https://xkcts.ucas.ac.cn:8443/courseManage/",
+    "course_info_url":"https://xkcts.ucas.ac.cn:8443/course/coursetime/"
+}
