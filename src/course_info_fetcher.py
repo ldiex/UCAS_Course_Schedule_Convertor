@@ -212,7 +212,7 @@ class CourseInfoFetcher:
         ics_content += "END:VCALENDAR\n"
 
         # save ics file
-        with open("course_schedule.ics", "w") as f:
+        with open("course_schedule.ics", "w", encoding='utf-8') as f:
             f.write(ics_content)
 
         
