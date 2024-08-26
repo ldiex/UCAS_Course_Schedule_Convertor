@@ -1,4 +1,6 @@
 # 国科大自动获取课表信息并导出ics文件脚本
+## Release
+为方便使用，已经编译了Windows版本的脚本，可以在没有python环境的情况下运行，[链接](https://github.com/ldiex/UCAS_Course_Schedule_Convertor/releases/tag/v1.0)
 ## 鸣谢
 本脚本的爬虫基于由热心学长开发的[UCAS Score Update Monitor](https://github.com/ljs-2002/UCAS_ScoreUpdateMonitor)
 ## 程序配置
