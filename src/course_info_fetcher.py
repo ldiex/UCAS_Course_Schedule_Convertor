@@ -129,7 +129,7 @@ class CourseInfoFetcher:
                 selected_course_data = response.json()
                 term_course_ids = []
                 for course in selected_course_data["list"]:
-                    if course["termName"] == "2024—2025学年(秋)第一学期":
+                    if course["termName"] == "2024—2025学年(春)第二学期":
                         term_course_ids.append(course["courseId"])
                 
                 for course_id in term_course_ids:
@@ -224,7 +224,7 @@ class CourseInfoFetcher:
         # event_time: tuple<string, string>, (start_time, end_time), e.g. ("08:00", "09:50")
 
         # Calculate the date of the event
-        date = "2024-08-26"
+        date = "2025-02-24"
         date = date.split("-")
         date = list(map(int, date))
         date = datetime.date(date[0], date[1], date[2])
