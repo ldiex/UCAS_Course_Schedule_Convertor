@@ -1,6 +1,6 @@
 # 国科大自动获取课表信息并导出ics文件脚本
 ## 使用
-Google Calender 直接支持导入`ics`文件. 如果你想要在 Apple Calendar 上使用, 可以先导入 Google Calendar, 然后直接在 iOS / macOS 中登录你的 Google Account 启用日历的同步; 你也可以打开 Google Calender 对应日历的分享功能, 然后在任何支持 iCal 链接的日历 App 中使用. 
+[Google Calendar](https://calendar.google.com/) 直接支持导入`ics`文件. 如果你想要在 Apple Calendar 上使用, 可以先导入 Google Calendar, 然后直接在 iOS / macOS 中登录你的 Google Account 启用日历的同步; 你也可以打开 Google Calendar 对应日历的分享功能, 然后在任何支持 iCal 链接的日历 App 中使用. 
 ## 鸣谢
 本脚本的爬虫基于由热心学长开发的[UCAS Score Update Monitor](https://github.com/ljs-2002/UCAS_ScoreUpdateMonitor)
 ## 程序配置
