@@ -4,7 +4,7 @@
     "pic_url":"https://sep.ucas.ac.cn/changePic",
     "slogin_url":"https://sep.ucas.ac.cn/slogin",
     "redirect_url":"https://sep.ucas.ac.cn/portal/site/226/821",
-    "score_base_url":"https://jwxk.ucas.ac.cn/score/bks/",
-    "course_base_url":"https://jwxk.ucas.ac.cn/courseManage/",
-    "course_info_url":"https://jwxk.ucas.ac.cn/course/coursetime/"
+    "score_base_url":"https://xkcts.ucas.ac.cn:8443/score/bks/",
+    "course_base_url":"https://xkcts.ucas.ac.cn:8443/courseManage/",
+    "course_info_url":"https://xkcts.ucas.ac.cn:8443/course/coursetime/"
 }
