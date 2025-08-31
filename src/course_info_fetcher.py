@@ -131,7 +131,7 @@ class CourseInfoFetcher:
                 for course in selected_course_data["list"]:
                     if course["termName"] == "2025—2026学年(秋)第一学期":
                         term_course_ids.append(course["courseId"])
-                
+
                 for course_id in term_course_ids:
                     course_info_url = self.course_info_url + str(course_id) + ".json" 
                     response = self.session.get(course_info_url)
@@ -142,7 +142,22 @@ class CourseInfoFetcher:
                         print(schedule["courseName"])
                         week_binary = bin(int(schedule["courseWeek"]))[2:][::-1]
                         time_binary = bin(int(schedule["courseTime"]))[2:]
-                        time_day = int(time_binary[:-12], 2)
+
+                        binary_to_day = {
+                            "10": 1,
+                            "11": 1,
+                            "100": 2,
+                            "110": 3,
+                            "1000": 4,
+                            "1010": 5,
+                            "1100": 6,
+                            "1110": 7
+                        }
+
+                        number2day = {1: "星期一", 2: "星期二", 3: "星期三", 4: "星期四", 5: "星期五", 6: "星期六", 7: "星期日"}
+
+                        time_day = binary_to_day[time_binary[:-12]]
+
                         time_section_binary = time_binary[-12:][::-1]
                         time_section_list = []
                         week_list = []
@@ -153,25 +168,25 @@ class CourseInfoFetcher:
                             if bit == '1':
                                 week_list.append(idx + 1)
 
-                        number2day = {1: "星期一", 2: "星期二", 3: "星期三", 4: "星期四", 5: "星期五", 6: "星期六", 7: "星期日"}
                         print(number2day[time_day])
                         print("上课时间段: ", time_section_list)
                         print("上课周数: ", week_list)
                         print("上课地点: ", schedule["coursePlace"])
 
                         section_to_time = {
-                            1: ("08:00", "08:50"),
-                            2: ("08:50", "09:40"),
-                            3: ("10:00", "10:50"),
-                            4: ("10:50", "11:40"),
-                            5: ("13:30", "14:20"),
-                            6: ("14:20", "15:10"),
-                            7: ("15:20", "16:10"),
-                            8: ("16:10", "17:00"),
-                            9: ("18:10", "19:00"),
-                            10: ("19:00", "19:50"),
-                            11: ("20:00", "20:50"),
-                            12: ("20:50", "21:40")
+                            1: ("08:30", "09:15"),
+                            2: ("09:20", "10:05"),
+                            3: ("10:25", "11:10"),
+                            4: ("11:15", "12:00"),
+                            5: ("13:30", "14:15"),
+                            6: ("14:20", "15:05"),
+                            7: ("15:25", "16:10"),
+                            8: ("16:15", "17:00"),
+                            9: ("17:05", "17:50"),
+                            10: ("18:30", "19:15"),
+                            11: ("19:20", "20:05"),
+                            12: ("20:15", "21:00"),
+                            13: ("21:05", "21:50")
                         }
 
                         for week in week_list:
